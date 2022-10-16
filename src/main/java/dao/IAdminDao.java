@@ -9,6 +9,7 @@ public interface IAdminDao {
 
     public List<admin> adminsParMc(String mc);
 
+    public List<admin> showAllAdmin();
     public admin getAdmin(Long id);
 
     public admin update(admin a);

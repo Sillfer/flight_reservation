@@ -32,6 +32,27 @@ public class AdminDaoImpl implements IAdminDao {
         return a;
     }
 
+    public List<admin> showAllAdmin(){
+        List<admin> admin = new ArrayList<admin>();
+        Connection connection = SingletonConnection.getConnection();
+        try {
+            PreparedStatement ps = connection.prepareStatement
+                    ("SELECT * FROM admin ");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                admin a = new admin();
+                a.setIdAdmin(rs.getLong("idAdmin"));  // set the id of the product
+                a.setEmailAdmin(rs.getString("emailAdmin"));
+                a.setPassWord(rs.getString("passWord"));
+                admin.add(a);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return admin;
+
+    }
+
     @Override
     public List<admin> adminsParMc(String mc) {
         List<admin> admin = new ArrayList<admin>();

@@ -8,6 +8,7 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="back.do">Hello Servlet</a>
+<a href="admin.do">Hello Servlet</a>
+<a href="reda.do">reda Servlet</a>
 </body>
 </html>
