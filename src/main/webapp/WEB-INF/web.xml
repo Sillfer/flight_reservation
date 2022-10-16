@@ -6,10 +6,10 @@
     <display-name>Flight Reservation</display-name>
     <servlet>
         <servlet-name>AdminServlet</servlet-name>
-        <servlet-class>web.AdminServlet</servlet-class>
+        <servlet-class>web.controller.AdminController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminServlet</servlet-name>
-        <url-pattern>/back.do</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </servlet-mapping>
 </web-app>
