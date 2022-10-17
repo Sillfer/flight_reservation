@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 //
+
 public class AdminController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,7 +19,13 @@ public class AdminController extends HttpServlet {
         if (path.equals("/admin.do")) {
 
             request.getRequestDispatcher("/views/admin/adminView.jsp").forward(request, response);
-        } else if(path.equals("/reda.do")){
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String path = request.getServletPath();
+        if(path.equals("/reda.do")){
             AdminModel a = new AdminModel();
             admin admin = new admin();
             String email = request.getParameter("email");
@@ -38,10 +45,5 @@ public class AdminController extends HttpServlet {
                 request.getRequestDispatcher("/views/admin/reda.jsp").forward(request,response);
             }
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }

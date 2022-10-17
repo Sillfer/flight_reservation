@@ -13,8 +13,9 @@
 </head>
 <body>
 <h1>reda form</h1>
-<h3><% request.getAttribute("result"); %></h3>
+<h3><%= request.getAttribute("result") %></h3>
 <h3></h3>
 <h3></h3>
+<script></script>
 </body>
 </html>
