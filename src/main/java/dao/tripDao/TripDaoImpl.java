@@ -1,9 +1,10 @@
-package dao;
+package dao.tripDao;
 
+import dao.tripDao.ITripDao;
+import database.SingletonConnection;
 import metier.entities.trip;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class TripDaoImpl implements ITripDao {
