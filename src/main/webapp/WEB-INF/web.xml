@@ -12,4 +12,12 @@
         <servlet-name>AdminServlet</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Client</servlet-name>
+        <servlet-class>web.controller.ClientController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Client</servlet-name>
+        <url-pattern>*.client</url-pattern>
+    </servlet-mapping>
 </web-app>

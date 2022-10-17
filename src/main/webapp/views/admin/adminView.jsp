@@ -30,13 +30,6 @@
                     <form action="reda.do" method="get">
                         <div class="flex flex-row items-center justify-center lg:justify-start">
                             <p class="text-lg mb-0 mr-4">Sign in with</p>
-
-
-
-
-
-                                <!-- Linkedin -->
-
                         </div>
 
                         <div
