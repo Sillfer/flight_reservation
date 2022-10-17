@@ -27,7 +27,7 @@
                     />
                 </div>
                 <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-                    <form action="reda.do" method="get">
+                    <form action="reda.do" method="post">
                         <div class="flex flex-row items-center justify-center lg:justify-start">
                             <p class="text-lg mb-0 mr-4">Sign in with</p>
 
