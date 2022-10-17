@@ -1,4 +1,4 @@
-package dao;
+package dao.tripDao;
 
 import metier.entities.trip;
 

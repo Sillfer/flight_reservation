@@ -8,8 +8,15 @@ import java.util.List;
 public class AdminModel {
 
     private String motCle;
+    private long idAdmin;
+    private String emailAdmin;
 
-    private List<admin> admin = new ArrayList<admin>();
+    public AdminModel(){}
+    public AdminModel(String motCle, long idAdmin, String emailAdmin) {
+        this.motCle = motCle;
+        this.idAdmin = idAdmin;
+        this.emailAdmin = emailAdmin;
+    }
 
     public String getMotCle() {
         return motCle;
@@ -19,11 +26,21 @@ public class AdminModel {
         this.motCle = motCle;
     }
 
-    private List<admin> getAdmins() {
-        return admin;
+    public long getIdAdmin() {
+        return idAdmin;
     }
 
-    public void setAdmins(List<admin> admin) {
-        this.admin = admin;
+    public void setIdAdmin(long idAdmin) {
+        this.idAdmin = idAdmin;
     }
+
+    public String getEmailAdmin() {
+        return emailAdmin;
+    }
+
+    public void setEmailAdmin(String emailAdmin) {
+        this.emailAdmin = emailAdmin;
+    }
+
+
 }

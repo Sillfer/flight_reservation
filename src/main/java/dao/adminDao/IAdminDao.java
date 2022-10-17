@@ -1,4 +1,4 @@
-package dao;
+package dao.adminDao;
 
 import metier.entities.admin;
 
@@ -9,7 +9,7 @@ public interface IAdminDao {
 
     public List<admin> adminsParMc(String mc);
 
-    public List<admin> showAllAdmin();
+    public admin loginAdmin(String email,String passWord);
     public admin getAdmin(Long id);
 
     public admin update(admin a);

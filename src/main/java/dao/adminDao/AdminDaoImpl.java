@@ -1,5 +1,6 @@
-package dao;
+package dao.adminDao;
 
+import database.SingletonConnection;
 import metier.entities.admin;
 
 import java.sql.Connection;
@@ -32,24 +33,28 @@ public class AdminDaoImpl implements IAdminDao {
         return a;
     }
 
-    public List<admin> showAllAdmin(){
-        List<admin> admin = new ArrayList<admin>();
+    public admin loginAdmin(String email,String password){
+        admin a = new admin();
         Connection connection = SingletonConnection.getConnection();
         try {
             PreparedStatement ps = connection.prepareStatement
-                    ("SELECT * FROM admin ");
+                    ("SELECT * FROM admin WHERE emailAdmin like ? and passWord like ? ");
+            ps.setString(1,email);
+            ps.setString(2,password);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                admin a = new admin();
                 a.setIdAdmin(rs.getLong("idAdmin"));  // set the id of the product
                 a.setEmailAdmin(rs.getString("emailAdmin"));
                 a.setPassWord(rs.getString("passWord"));
-                admin.add(a);
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return admin;
+        if(a.getIdAdmin()!= null)
+        return a;
+        else
+         return null;
 
     }
 
