@@ -11,14 +11,14 @@
 </jsp:include>
 <!-- component -->
 
-<div class="h-5/6 flex">
+<div class="h-5/6 flex items-center mt-20">
     <div class="hidden lg:flex w-full lg:w-1/2 login_img_section
           justify-around items-center">
         <img src="https://cdn.pixabay.com/photo/2013/07/13/13/20/plane-160861__340.png" alt="" class="w-full">
     </div>
     <div class="flex w-full lg:w-1/2 justify-center items-center  space-y-8">
         <div class="mx-auto w-full max-w-[550px]">
-            <form action="https://formbold.com/s/FORM_ID" method="POST">
+            <form action="#" method="POST">
                 <div class="mb-5">
                     <label class="mb-3 block text-base font-medium text-[#07074D]">
                         Type of Flight <span class="text-red-500">*</span>
@@ -157,6 +157,5 @@
 
     </div>
 </div>
-
 </body>
 </html>

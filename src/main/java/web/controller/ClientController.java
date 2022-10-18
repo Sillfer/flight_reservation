@@ -15,6 +15,8 @@ public class ClientController extends HttpServlet {
         String path = request.getServletPath();
         if (path.equals("/reservation.client")) {
             request.getRequestDispatcher("index.jsp").forward(request, response);
+        }else if(path.equals("/showFlights.client")){
+            request.getRequestDispatcher("/views/trip/flightSearch.jsp").forward(request, response);
         }
     }
 
