@@ -17,9 +17,9 @@
 </jsp:include>
 
 <!-- component -->
-<div class="flex flex-col items-start justify-start min-h-screen bg-center bg-cover">
+<div class="flex flex-col content-start justify-start min-h-screen bg-center bg-cover">
     <div class="max-w-md w-full h-full mx-auto z-10 bg-blue-900 rounded-3xl">
-        <div class="flex flex-col">
+        <div class="flex flex-col justify-items-start">
             <div class="bg-white relative drop-shadow-2xl  rounded-3xl p-4 m-4">
                 <div class="flex-none sm:flex">
                     <div class=" relative h-32 w-32   sm:mb-0 mb-3 hidden">
@@ -36,13 +36,13 @@
                         </a>
                     </div>
                     <div class="flex-auto justify-evenly">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-start justify-start">
                             <div class="flex items-center  my-1">
 								<span class="mr-3 rounded-full bg-white w-8 h-8">
     <img src="https://image.winudf.com/v2/image1/Y29tLmJldHMuYWlyaW5kaWEudWlfaWNvbl8xNTU0NTM4MzcxXzA0Mw/icon.png?w=&amp;fakeurl=1"
          class="h-8 p-1">
 </span>
-                                <h2 class="font-medium">Airindia</h2>
+                                <h2 class="font-medium">Reda Airlines</h2>
                             </div>
                             <div class="ml-auto text-blue-800">A380</div>
                         </div>
@@ -123,11 +123,6 @@
                                 <div class="font-semibold">12 E</div>
 
                             </div>
-                        </div>
-                        <div class="flex flex-col py-5  justify-center text-sm ">
-                            <h6 class="font-bold text-center">Boarding Pass</h6>
-
-                            <div class="barcode h-14 w-0 inline-block mt-4 relative left-auto"></div>
                         </div>
                     </div>
                 </div>
