@@ -9,7 +9,8 @@ public class trip implements Serializable {
     private Long idTrip;
     private String villeDepart;
     private String villeArrivee;
-    private LocalDateTime heureDepart;
+
+    private LocalDateTime dateDepart;
     private LocalDateTime dateArrivee;
     private Double priceTrip;
     private int statusEscale;
@@ -23,7 +24,7 @@ public class trip implements Serializable {
     public trip(String villeDepart, String villeArrivee, LocalDateTime heureDepart, LocalDateTime dateArrivee, Double priceTrip, int statusEscale, String villeEscale) {
         this.villeDepart = villeDepart;
         this.villeArrivee = villeArrivee;
-        this.heureDepart = heureDepart;
+        this.dateDepart = heureDepart;
         this.dateArrivee = dateArrivee;
         this.priceTrip = priceTrip;
         this.statusEscale = statusEscale;
@@ -54,20 +55,20 @@ public class trip implements Serializable {
         this.villeArrivee = villeArrivee;
     }
 
-    public java.util.Date getHeureDepart() {
-        return Date.valueOf(String.valueOf(heureDepart));
+    public LocalDateTime getDateDepart() {
+        return this.dateDepart;
     }
 
-    public void setHeureDepart(LocalDate heureDepart) {
-        this.heureDepart = LocalDateTime.from(heureDepart);
+    public void setDateDepart(LocalDateTime heureDepart) {
+        this.dateDepart = heureDepart;
     }
 
-    public java.util.Date getDateArrivee() {
-        return Date.valueOf(String.valueOf(dateArrivee));
+    public LocalDateTime getDateArrivee() {
+        return this.dateArrivee;
     }
 
-    public void setDateArrivee(LocalDate dateArrivee) {
-        this.dateArrivee = LocalDateTime.from(dateArrivee);
+    public void setDateArrivee(LocalDateTime dateArrivee) {
+        this.dateArrivee = dateArrivee;
     }
 
     public Double getPriceTrip() {
@@ -108,7 +109,7 @@ public class trip implements Serializable {
                 "idTrip=" + idTrip +
                 ", villeDepart='" + villeDepart + '\'' +
                 ", villeArrivee='" + villeArrivee + '\'' +
-                ", heureDepart=" + heureDepart +
+                ", heureDepart=" + dateDepart +
                 ", dateArrivee=" + dateArrivee +
                 ", priceTrip=" + priceTrip +
                 ", statusEscale=" + statusEscale +
