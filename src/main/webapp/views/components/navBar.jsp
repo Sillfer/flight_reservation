@@ -27,7 +27,7 @@
 
                 <div class="hidden sm:flex sm:items-center">
                     <a href="reservation.client" class="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-4">Home</a>
-                    <a href="showFlights.client" class="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-4">Services</a>
+                    <a href="#" class="text-gray-800 text-sm font-semibold hover:text-orange-600 mr-4">Services</a>
                     <a href="#" class="text-gray-800 text-sm font-semibold hover:text-orange-600">Contact</a>
                 </div>
 
