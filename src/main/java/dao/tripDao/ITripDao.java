@@ -2,6 +2,7 @@ package dao.tripDao;
 
 import metier.entities.trip;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface ITripDao {
@@ -10,7 +11,8 @@ public interface ITripDao {
 
     public List<trip> tripsParMc(String mc);
 
-    public trip getTrip(Long id);
+    public List<trip> displayTripByDateAndDate(String villeDepart, String villeArrivee,LocalDateTime dateDepart);
+    public trip getTrip(int id);
 
     public trip update(trip t);
 
