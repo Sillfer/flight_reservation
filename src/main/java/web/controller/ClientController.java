@@ -17,6 +17,10 @@ public class ClientController extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }else if(path.equals("/showFlights.client")){
             request.getRequestDispatcher("/views/trip/flightSearch.jsp").forward(request, response);
+        }else if (path.equals("/login.client")){
+            request.getRequestDispatcher("/views/client/login.jsp").forward(request, response);
+        } else if (path.equals("/signup.client")) {
+            request.getRequestDispatcher("/views/client/signup.jsp").forward(request, response);
         }
     }
 
