@@ -23,7 +23,7 @@ public class ReservationDaoImpl implements IResarvationDao{
             ps.setLong(2,idPassager);
             ps.setString(3,villedepart);
             ps.setString(4,villeArrivee);
-            ps.setString(5,dateArrivee);
+            ps.setString(5,dateDepart);
             ps.setString(6,dateArrivee);
             ps.setDouble(7,prix);
 //            ps.setDouble(7,priceReservation);
@@ -50,8 +50,8 @@ public class ReservationDaoImpl implements IResarvationDao{
                 r.setIdPassager(rs.getLong("idPassager"));
                 r.setVilleDepart(rs.getString("villeDepart"));
                 r.setVilleArrivee(rs.getString("villeArrivee"));
-                r.setDateDepart(LocalDateTime.parse(rs.getString("dateDepart")));
-                r.setDateArrivee(LocalDateTime.parse(rs.getString("dateArrivee")));
+                r.setDateDepart(rs.getString("dateDepart"));
+                r.setDateArrivee(rs.getString("dateArrivee"));
 //                r.setDateDepart(rs.getObject("dateDepart"));
 //                    String dateD = rs.getString("dateDepart");
 //                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");

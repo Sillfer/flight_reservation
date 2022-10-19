@@ -13,7 +13,7 @@
     </div>
     <div class="flex w-full lg:w-1/2 justify-center items-center  space-y-8">
         <div class="mx-auto w-full max-w-[550px]">
-            <form action="showFlights.client" method="POST">
+            <form action="showFlights.flight" method="POST">
                 <div class="-mx-3 flex flex-wrap">
                     <div class="w-full px-3 sm:w-1/2">
                         <div class="mb-5">
