@@ -17,11 +17,11 @@ public class ReservationTest {
 //        }
 
         //******************************************* Display All reservation made by travler
-         ReservationDaoImpl rs = new ReservationDaoImpl();
-         List<reservation> listreservation = new ArrayList<>();
-         listreservation = rs.listTripPassenger(1);
-         for(reservation test:listreservation)
-             System.out.println(test.toString());
+//         ReservationDaoImpl rs = new ReservationDaoImpl();
+//         List<reservation> listreservation = new ArrayList<>();
+//         listreservation = rs.listTripPassenger(1);
+//         for(reservation test:listreservation)
+//             System.out.println(test.toString());
 
 
 

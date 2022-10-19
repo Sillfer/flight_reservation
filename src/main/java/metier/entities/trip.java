@@ -21,10 +21,10 @@ public class trip implements Serializable {
         super();
     }
 
-    public trip(String villeDepart, String villeArrivee, LocalDateTime heureDepart, LocalDateTime dateArrivee, Double priceTrip, int statusEscale, String villeEscale) {
+    public trip(String villeDepart, String villeArrivee, LocalDateTime dateDepart, LocalDateTime dateArrivee, Double priceTrip, int statusEscale, String villeEscale) {
         this.villeDepart = villeDepart;
         this.villeArrivee = villeArrivee;
-        this.dateDepart = heureDepart;
+        this.dateDepart = dateDepart;
         this.dateArrivee = dateArrivee;
         this.priceTrip = priceTrip;
         this.statusEscale = statusEscale;

@@ -161,7 +161,7 @@ https://assets-us-01.kc-usercontent.com/0542d611-b6d8-4320-a4f4-35ac5cbf43a6/5ce
                     <span class="text-gray-300 font-normal">sign in</span>
                     <span class="h-px w-16 bg-gray-200"></span>
                 </div>
-                <form class="mt-5 space-y-5" action="go.client" method="POST">
+                <form class="mt-5 space-y-5" action="signup.client" method="POST">
                     <div class="relative">
                         <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">First Name
                             <input

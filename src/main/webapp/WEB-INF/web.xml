@@ -20,4 +20,12 @@
         <servlet-name>Client</servlet-name>
         <url-pattern>*.client</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FlightServlet</servlet-name>
+        <servlet-class>web.controller.TripController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FlightServlet</servlet-name>
+        <url-pattern>*.flight</url-pattern>
+    </servlet-mapping>
 </web-app>

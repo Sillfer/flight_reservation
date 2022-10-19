@@ -19,7 +19,7 @@ public class TripTest {
 //        else System.out.println("nooooooooooooooooooo");
 //            System.out.println(admins.toString());
         List<trip> TripList = new ArrayList<>();
-        String str = "2022-11-12 00:20:00";
+        String str = "2022-11-12 02:00:00";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         LocalDateTime dateTime = LocalDateTime.parse(str, formatter);
         List<trip> list = new ArrayList<>();

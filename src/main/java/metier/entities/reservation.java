@@ -8,13 +8,13 @@ public class reservation {
     private long idPassager;
     private String villeDepart;
     private String villeArrivee;
-    private LocalDateTime dateDepart;
-    private LocalDateTime dateArrivee;
+    private String dateDepart;
+    private String dateArrivee;
     private double priceTrip;
 
     public reservation(){}
 
-    public reservation(long idReservation, long idTrip, long idPassager, String villeDepart, String villeArrivee, LocalDateTime dateDepart, LocalDateTime dateArrivee, double priceTrip) {
+    public reservation(long idReservation, long idTrip, long idPassager, String villeDepart, String villeArrivee, String dateDepart, String dateArrivee, double priceTrip) {
         this.idReservation = idReservation;
         this.idTrip = idTrip;
         this.idPassager = idPassager;
@@ -67,19 +67,19 @@ public class reservation {
         this.villeArrivee = villeArrivee;
     }
 
-    public LocalDateTime getDateDepart() {
+    public String getDateDepart() {
         return dateDepart;
     }
 
-    public void setDateDepart(LocalDateTime dateDepart) {
+    public void setDateDepart(String dateDepart) {
         this.dateDepart = dateDepart;
     }
 
-    public LocalDateTime getDateArrivee() {
+    public String getDateArrivee() {
         return dateArrivee;
     }
 
-    public void setDateArrivee(LocalDateTime dateArrivee) {
+    public void setDateArrivee(String dateArrivee) {
         this.dateArrivee = dateArrivee;
     }
 
