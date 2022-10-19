@@ -36,9 +36,6 @@
                         <div class="border-b border-dashed border-b-2 my-5"></div>
                         <div class="flex items-center">
                             <div class="flex flex-col">
-                                <div class="flex-auto text-xs text-gray-400 my-1">
-                                    <span class="mr-1 ">MO</span><span>19 22</span>
-                                </div>
                                 <div class="w-full flex-none text-lg text-blue-800 font-bold leading-none">COK</div>
                                 <div class="text-xs">Cochi</div>
 
@@ -49,9 +46,6 @@
 
                             </div>
                             <div class="flex flex-col ">
-                                <div class="flex-auto text-xs text-gray-400 my-1">
-                                    <span class="mr-1">MO</span><span>19 22</span>
-                                </div>
                                 <div class="w-full flex-none text-lg text-blue-800 font-bold leading-none">DXB</div>
                                 <div class="text-xs">Dubai</div>
 
@@ -76,7 +70,7 @@
                         <div class="flex items-center mb-4 px-5">
                             <div class="flex flex-col text-sm">
                                 <span class="">Departs</span>
-                                <div class="font-semibold">11:30Am</div>
+                                <div class="font-semibold">MON 19-10 11:30Am</div>
 
                             </div>
                             <div class="flex flex-col text-sm mx-auto">
@@ -86,7 +80,7 @@
                             </div>
                             <div class="flex flex-col text-sm ">
                                 <span class="">Arrived</span>
-                                <div class="font-semibold">2:00PM</div>
+                                <div class="font-semibold">THUR 20-10 03:30Am</div>
 
                             </div>
                         </div>
