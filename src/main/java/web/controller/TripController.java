@@ -1,14 +1,17 @@
 package web.controller;
 
+import dao.passengerDao.PassagerDaoImpl;
 import dao.reservationDao.IResarvationDao;
 import dao.reservationDao.ReservationDaoImpl;
 import dao.tripDao.ITripDao;
 import dao.tripDao.TripDaoImpl;
+import helpers.SendMail;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import metier.entities.passager;
 import metier.entities.trip;
 
 import java.io.IOException;
@@ -33,6 +36,16 @@ public class TripController extends HttpServlet {
         String path = request.getServletPath();
 //    String villeDepart = null;
         if (path.equals("/showFlights.flight")) {
+            Cookie[] cookies = request.getCookies();
+            String log = "0";
+            if(cookies!=null){
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("id")) {
+                        log = cookie.getValue();
+                    }
+                }
+            }
+            request.setAttribute("log",log);
             String villeDepart = request.getParameter("villeDepart");
             String villeArrivee = request.getParameter("villeArrivee");
             LocalDateTime heureDepart = LocalDateTime.parse(request.getParameter("heureDepart"));
@@ -43,6 +56,8 @@ public class TripController extends HttpServlet {
 
 
         } else if (path.equals("/reserve.flight")) {
+
+
             String villeDepart = request.getParameter("villeDepart");
             String villeArrivee = request.getParameter("villeArrivee");
             Double priceTrip = Double.parseDouble(request.getParameter("priceTrip"));
@@ -51,18 +66,38 @@ public class TripController extends HttpServlet {
             Cookie[] cookies = request.getCookies();
             int idPassager = 0;
 //            Cookie[] cookies;
+            if(cookies!=null){
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("id")) {
                     idPassager = Integer.parseInt(cookie.getValue());
                 }
             }
+            }
             int idTrip = Integer.parseInt(request.getParameter("idTrip"));
             ReservationDaoImpl reservationDao = new ReservationDaoImpl();
+           boolean test = false;
+            if(idPassager != 0){
+                PassagerDaoImpl p = new PassagerDaoImpl();
+
+                //Send message procedure ++++++++++++++++++++++++++++++++++
+                passager ps = new passager();
+                ps=p.getPassagerById(idPassager);
+                String messageEnvoyer = "Bonjour ,\nVoyage numero : "+idTrip+"\nVille Depart : "+villeArrivee+"\nDate Depart : "+heureDepart+"\nMontant paye : "+priceTrip;
 //            Boolean test = reservationDao.createReservation(idTrip, idPassager, priceTrip, villeDepart, villeArrivee, heureDepart, heureArrivee);
-            Boolean test = reservationDao.createReservation(idTrip, idPassager, priceTrip, villeDepart, villeArrivee,  heureDepart, heureArrivee);
-            if (test) {
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                try {
+                    SendMail.sendMail(ps.getEmailPassager(),messageEnvoyer);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+                test = reservationDao.createReservation(idTrip, idPassager, priceTrip, villeDepart, villeArrivee,  heureDepart, heureArrivee);
+                request.setAttribute("log",String.valueOf(idPassager));
+                request.getRequestDispatcher("/views/home/index.jsp").forward(request, response);
+            }
+           else if (test ) {
+                request.setAttribute("log",String.valueOf(idPassager));
+                request.getRequestDispatcher("/views/home/index.jsp").forward(request, response);
             } else {
+                request.setAttribute("log",String.valueOf(idPassager));
                 request.getRequestDispatcher("/views/client/login.jsp").forward(request, response);
             }
 

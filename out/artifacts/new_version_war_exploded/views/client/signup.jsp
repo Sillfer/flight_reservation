@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<title>Log In</title>
+
+<title>Sign Up</title>
 <jsp:include page="../components/navBar.jsp">
     <jsp:param name="navbar" value="navbar"/>
 </jsp:include>
@@ -151,22 +152,42 @@ https://assets-us-01.kc-usercontent.com/0542d611-b6d8-4320-a4f4-35ac5cbf43a6/5ce
             <div class="max-w-md w-full space-y-8">
                 <div class="text-center">
                     <h2 class="mt-6 text-3xl font-bold text-gray-900">
-                        Welcome Back!
+                        Welcome Among Us
                     </h2>
-                    <p class="mt-2 text-sm text-gray-500">Please sign in to your account</p>
+                    <p class="mt-2 text-sm text-gray-500">Please fill in your information</p>
                 </div>
                 <div class="flex items-center justify-center space-x-2">
                     <span class="h-px w-16 bg-gray-200"></span>
                     <span class="text-gray-300 font-normal">sign in</span>
                     <span class="h-px w-16 bg-gray-200"></span>
                 </div>
-                <form class="mt-8 space-y-6" action="loginClient.client" method="POST">
+                <form class="mt-5 space-y-5" action="signup.client" method="POST">
+                    <div class="relative">
+                        <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">First Name
+                            <input
+                                    class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                                    type="text" placeholder="First Name" name="firstName">
+                        </label>
+                    </div>
+                    <div class="relative">
+                        <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Last Name
+                            <input
+                                    class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                                    type="text" placeholder="Last Name" name="lastName">
+                        </label>
+                    </div>
+                    <div class="relative">
+                        <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Phone Number
+                            <input
+                                    class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
+                                    type="text" placeholder="Phone Number" name="phonePassager">
+                        </label>
+                    </div>
                     <div class="relative">
                         <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">Email
                             <input
                                     class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-indigo-500"
                                     type="email" placeholder="Email" name="emailPassager">
-
                         </label>
                     </div>
                     <div class="mt-8 content-center">
@@ -177,9 +198,7 @@ https://assets-us-01.kc-usercontent.com/0542d611-b6d8-4320-a4f4-35ac5cbf43a6/5ce
                         </label>
                     </div>
                     <div class="flex items-center justify-between">
-                        <% if(request.getAttribute("errorMessage")!=null){ %>
-                        <p class="text-red-600"><%= request.getAttribute("alert") %></p>
-                        <% } %>
+
                     </div>
                     <div>
                         <button type="submit"
@@ -188,13 +207,14 @@ https://assets-us-01.kc-usercontent.com/0542d611-b6d8-4320-a4f4-35ac5cbf43a6/5ce
                         </button>
                     </div>
                     <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
-                        <span>Don't have an account?</span>
-                        <a href="signup.client"
-                           class="text-orange-500 hover:text-amber-600 no-underline hover:underline cursor-pointer transition ease-in duration-300">Sign
-                            up</a>
+                        <span>Already have an account?</span>
+                        <a href="login.client"
+                           class="text-orange-500 hover:text-amber-600 no-underline hover:underline cursor-pointer transition ease-in duration-300">Login
+                        </a>
                     </p>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
